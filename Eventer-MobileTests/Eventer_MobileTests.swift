@@ -1,10 +1,3 @@
-//
-//  Eventer_MobileTests.swift
-//  Eventer-MobileTests
-//
-//  Created by Silva, Pedro Henrique Nieto da on 11/06/26.
-//
-
 import XCTest
 @testable import Eventer_Mobile
 

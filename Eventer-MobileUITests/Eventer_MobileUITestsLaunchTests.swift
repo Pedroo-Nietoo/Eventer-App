@@ -1,10 +1,3 @@
-//
-//  Eventer_MobileUITestsLaunchTests.swift
-//  Eventer-MobileUITests
-//
-//  Created by Silva, Pedro Henrique Nieto da on 11/06/26.
-//
-
 import XCTest
 
 final class Eventer_MobileUITestsLaunchTests: XCTestCase {

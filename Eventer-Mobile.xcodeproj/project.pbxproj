@@ -6,6 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5981B0CF2FDC95990038B422 /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981B0CE2FDC95990038B422 /* TicketType.swift */; };
+		5981B0D12FDC95CB0038B422 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */; };
+		59EFF6752FDB35AF007A50D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EFF6722FDB35AF007A50D5 /* Assets.xcassets */; };
+		59EFF6762FDB35AF007A50D5 /* Eventer_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */; };
+		59EFF6872FDB37DD007A50D5 /* EventerMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6852FDB37DD007A50D5 /* EventerMobile.xcdatamodeld */; };
+		59EFF6892FDB382B007A50D5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6882FDB382B007A50D5 /* CoreDataManager.swift */; };
+		59EFF68B2FDB3862007A50D5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68A2FDB3862007A50D5 /* AuthRepository.swift */; };
+		59EFF68D2FDB38D2007A50D5 /* AppSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68C2FDB38D2007A50D5 /* AppSessionManager.swift */; };
+		59EFF68F2FDB3901007A50D5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68E2FDB3901007A50D5 /* LoginViewModel.swift */; };
+		59EFF6912FDB3933007A50D5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6902FDB3933007A50D5 /* LoginView.swift */; };
+		59EFF6932FDB39E6007A50D5 /* AuthDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6922FDB39E6007A50D5 /* AuthDTOs.swift */; };
+		59EFF6952FDB3A24007A50D5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6942FDB3A24007A50D5 /* APIClient.swift */; };
+		59EFF6972FDB3A75007A50D5 /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6962FDB3A75007A50D5 /* BiometricManager.swift */; };
+		59EFF6992FDB3AA6007A50D5 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6982FDB3AA6007A50D5 /* RegisterViewModel.swift */; };
+		59EFF69B2FDB3ADA007A50D5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF69A2FDB3ADA007A50D5 /* RegisterView.swift */; };
+		59EFF69D2FDB3B68007A50D5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF69C2FDB3B68007A50D5 /* RootView.swift */; };
+		59EFF6A02FDB3B96007A50D5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF69F2FDB3B96007A50D5 /* MainTabView.swift */; };
+		59EFF6A22FDB3D7F007A50D5 /* SecureInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6A12FDB3D7F007A50D5 /* SecureInputView.swift */; };
+		59EFF6A52FDB3FF2007A50D5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6A42FDB3FF2007A50D5 /* LocationManager.swift */; };
+		59EFF6A92FDB401A007A50D5 /* EventsMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6A82FDB401A007A50D5 /* EventsMapViewModel.swift */; };
+		59EFF6AC2FDB4050007A50D5 /* EventListSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6AB2FDB4050007A50D5 /* EventListSheetView.swift */; };
+		59EFF6AE2FDB4069007A50D5 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6AD2FDB4069007A50D5 /* EventDetailView.swift */; };
+		59EFF6B02FDB40B0007A50D5 /* EventsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6AF2FDB40B0007A50D5 /* EventsMapView.swift */; };
+		59EFF6B22FDB4195007A50D5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6B12FDB4195007A50D5 /* Event.swift */; };
+		59EFF6B62FDB41BF007A50D5 /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6B52FDB41BF007A50D5 /* EventRepository.swift */; };
+		59EFF6B82FDB41D3007A50D5 /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6B72FDB41D3007A50D5 /* EventRowView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		59EFF6522FDB3558007A50D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,17 +53,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5981B0CE2FDC95990038B422 /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
+		5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		59EFF63F2FDB3556007A50D5 /* Eventer-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventer-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EFF6512FDB3558007A50D5 /* Eventer-MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eventer-MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EFF65B2FDB3558007A50D5 /* Eventer-MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eventer-MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59EFF6722FDB35AF007A50D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventer_MobileApp.swift; sourceTree = "<group>"; };
+		59EFF6862FDB37DD007A50D5 /* EventerMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventerMobile.xcdatamodel; sourceTree = "<group>"; };
+		59EFF6882FDB382B007A50D5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		59EFF68A2FDB3862007A50D5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		59EFF68C2FDB38D2007A50D5 /* AppSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSessionManager.swift; sourceTree = "<group>"; };
+		59EFF68E2FDB3901007A50D5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		59EFF6902FDB3933007A50D5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		59EFF6922FDB39E6007A50D5 /* AuthDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTOs.swift; sourceTree = "<group>"; };
+		59EFF6942FDB3A24007A50D5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		59EFF6962FDB3A75007A50D5 /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
+		59EFF6982FDB3AA6007A50D5 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		59EFF69A2FDB3ADA007A50D5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		59EFF69C2FDB3B68007A50D5 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		59EFF69F2FDB3B96007A50D5 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		59EFF6A12FDB3D7F007A50D5 /* SecureInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputView.swift; sourceTree = "<group>"; };
+		59EFF6A42FDB3FF2007A50D5 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		59EFF6A82FDB401A007A50D5 /* EventsMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapViewModel.swift; sourceTree = "<group>"; };
+		59EFF6AB2FDB4050007A50D5 /* EventListSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListSheetView.swift; sourceTree = "<group>"; };
+		59EFF6AD2FDB4069007A50D5 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		59EFF6AF2FDB40B0007A50D5 /* EventsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsMapView.swift; sourceTree = "<group>"; };
+		59EFF6B12FDB4195007A50D5 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		59EFF6B52FDB41BF007A50D5 /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		59EFF6B72FDB41D3007A50D5 /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		59EFF6412FDB3556007A50D5 /* Eventer-Mobile */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Eventer-Mobile";
-			sourceTree = "<group>";
-		};
 		59EFF6542FDB3558007A50D5 /* Eventer-MobileTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Eventer-MobileTests";
@@ -75,7 +125,7 @@
 		59EFF6362FDB3556007A50D5 = {
 			isa = PBXGroup;
 			children = (
-				59EFF6412FDB3556007A50D5 /* Eventer-Mobile */,
+				59EFF6742FDB35AF007A50D5 /* Eventer-Mobile */,
 				59EFF6542FDB3558007A50D5 /* Eventer-MobileTests */,
 				59EFF65E2FDB3558007A50D5 /* Eventer-MobileUITests */,
 				59EFF6402FDB3556007A50D5 /* Products */,
@@ -92,6 +142,215 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		59EFF6702FDB35AF007A50D5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF69C2FDB3B68007A50D5 /* RootView.swift */,
+				59EFF68C2FDB38D2007A50D5 /* AppSessionManager.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		59EFF6712FDB35AF007A50D5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6A32FDB3FE3007A50D5 /* Location */,
+				59EFF67B2FDB363C007A50D5 /* UIComponents */,
+				59EFF67A2FDB3626007A50D5 /* Extensions */,
+				59EFF6792FDB361E007A50D5 /* Security */,
+				59EFF6782FDB35BE007A50D5 /* Storage */,
+				59EFF6772FDB35B4007A50D5 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		59EFF6742FDB35AF007A50D5 /* Eventer-Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6842FDB37A3007A50D5 /* Resources */,
+				59EFF67F2FDB36F4007A50D5 /* Features */,
+				59EFF67C2FDB364B007A50D5 /* Domain */,
+				59EFF6702FDB35AF007A50D5 /* App */,
+				59EFF6712FDB35AF007A50D5 /* Core */,
+				59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */,
+			);
+			path = "Eventer-Mobile";
+			sourceTree = "<group>";
+		};
+		59EFF6772FDB35B4007A50D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6942FDB3A24007A50D5 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		59EFF6782FDB35BE007A50D5 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6882FDB382B007A50D5 /* CoreDataManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		59EFF6792FDB361E007A50D5 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6962FDB3A75007A50D5 /* BiometricManager.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		59EFF67A2FDB3626007A50D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59EFF67B2FDB363C007A50D5 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6A12FDB3D7F007A50D5 /* SecureInputView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		59EFF67C2FDB364B007A50D5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF67E2FDB36BB007A50D5 /* DTOs */,
+				59EFF67D2FDB36B1007A50D5 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		59EFF67D2FDB36B1007A50D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5981B0CE2FDC95990038B422 /* TicketType.swift */,
+				59EFF6B12FDB4195007A50D5 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		59EFF67E2FDB36BB007A50D5 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6922FDB39E6007A50D5 /* AuthDTOs.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		59EFF67F2FDB36F4007A50D5 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6A62FDB400B007A50D5 /* Events */,
+				59EFF69E2FDB3B8C007A50D5 /* Main */,
+				59EFF6802FDB3757007A50D5 /* Auth */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		59EFF6802FDB3757007A50D5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6832FDB3791007A50D5 /* Repositories */,
+				59EFF6822FDB3775007A50D5 /* ViewModels */,
+				59EFF6812FDB376B007A50D5 /* Views */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		59EFF6812FDB376B007A50D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF69A2FDB3ADA007A50D5 /* RegisterView.swift */,
+				59EFF6902FDB3933007A50D5 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59EFF6822FDB3775007A50D5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6982FDB3AA6007A50D5 /* RegisterViewModel.swift */,
+				59EFF68E2FDB3901007A50D5 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		59EFF6832FDB3791007A50D5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF68A2FDB3862007A50D5 /* AuthRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		59EFF6842FDB37A3007A50D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6722FDB35AF007A50D5 /* Assets.xcassets */,
+				59EFF6852FDB37DD007A50D5 /* EventerMobile.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59EFF69E2FDB3B8C007A50D5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF69F2FDB3B96007A50D5 /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		59EFF6A32FDB3FE3007A50D5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6A42FDB3FF2007A50D5 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		59EFF6A62FDB400B007A50D5 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6B32FDB41AC007A50D5 /* Repositories */,
+				59EFF6AA2FDB4046007A50D5 /* Views */,
+				59EFF6A72FDB4010007A50D5 /* ViewModels */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		59EFF6A72FDB4010007A50D5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */,
+				59EFF6A82FDB401A007A50D5 /* EventsMapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		59EFF6AA2FDB4046007A50D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6B72FDB41D3007A50D5 /* EventRowView.swift */,
+				59EFF6AF2FDB40B0007A50D5 /* EventsMapView.swift */,
+				59EFF6AD2FDB4069007A50D5 /* EventDetailView.swift */,
+				59EFF6AB2FDB4050007A50D5 /* EventListSheetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59EFF6B32FDB41AC007A50D5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				59EFF6B52FDB41BF007A50D5 /* EventRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +365,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				59EFF6412FDB3556007A50D5 /* Eventer-Mobile */,
 			);
 			name = "Eventer-Mobile";
 			packageProductDependencies = (
@@ -212,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EFF6752FDB35AF007A50D5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +493,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EFF6A22FDB3D7F007A50D5 /* SecureInputView.swift in Sources */,
+				59EFF6892FDB382B007A50D5 /* CoreDataManager.swift in Sources */,
+				59EFF6B62FDB41BF007A50D5 /* EventRepository.swift in Sources */,
+				59EFF6912FDB3933007A50D5 /* LoginView.swift in Sources */,
+				59EFF6AC2FDB4050007A50D5 /* EventListSheetView.swift in Sources */,
+				59EFF6B02FDB40B0007A50D5 /* EventsMapView.swift in Sources */,
+				59EFF68B2FDB3862007A50D5 /* AuthRepository.swift in Sources */,
+				59EFF6A52FDB3FF2007A50D5 /* LocationManager.swift in Sources */,
+				59EFF68F2FDB3901007A50D5 /* LoginViewModel.swift in Sources */,
+				59EFF6992FDB3AA6007A50D5 /* RegisterViewModel.swift in Sources */,
+				59EFF6762FDB35AF007A50D5 /* Eventer_MobileApp.swift in Sources */,
+				59EFF6932FDB39E6007A50D5 /* AuthDTOs.swift in Sources */,
+				59EFF68D2FDB38D2007A50D5 /* AppSessionManager.swift in Sources */,
+				59EFF6AE2FDB4069007A50D5 /* EventDetailView.swift in Sources */,
+				59EFF6872FDB37DD007A50D5 /* EventerMobile.xcdatamodeld in Sources */,
+				59EFF69D2FDB3B68007A50D5 /* RootView.swift in Sources */,
+				59EFF6B82FDB41D3007A50D5 /* EventRowView.swift in Sources */,
+				5981B0CF2FDC95990038B422 /* TicketType.swift in Sources */,
+				59EFF69B2FDB3ADA007A50D5 /* RegisterView.swift in Sources */,
+				5981B0D12FDC95CB0038B422 /* EventDetailViewModel.swift in Sources */,
+				59EFF6A02FDB3B96007A50D5 /* MainTabView.swift in Sources */,
+				59EFF6972FDB3A75007A50D5 /* BiometricManager.swift in Sources */,
+				59EFF6A92FDB401A007A50D5 /* EventsMapViewModel.swift in Sources */,
+				59EFF6B22FDB4195007A50D5 /* Event.swift in Sources */,
+				59EFF6952FDB3A24007A50D5 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +679,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Precisamos da sua localização para mostrar os eventos mais próximos de você";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +711,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Precisamos da sua localização para mostrar os eventos mais próximos de você";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,6 +854,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59EFF6852FDB37DD007A50D5 /* EventerMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59EFF6862FDB37DD007A50D5 /* EventerMobile.xcdatamodel */,
+			);
+			currentVersion = 59EFF6862FDB37DD007A50D5 /* EventerMobile.xcdatamodel */;
+			path = EventerMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 59EFF6372FDB3556007A50D5 /* Project object */;
 }
