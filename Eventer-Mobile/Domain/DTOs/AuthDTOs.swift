@@ -14,6 +14,16 @@ struct CreateUserDto: Codable {
 
 struct LoginResponseDto: Codable {
     let access_token: String
+    let refresh_token: String
+}
+
+struct RefreshRequestDto: Codable {
+    let refresh_token: String
+}
+
+struct RefreshResponseDto: Codable {
+    let access_token: String
+    let refresh_token: String
 }
 
 struct UserResponseDto: Codable, Identifiable {

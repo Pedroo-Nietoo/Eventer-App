@@ -13,12 +13,12 @@ class EventDetailViewModel: ObservableObject {
         self.repository = repository
     }
     
-    func loadTickets(for eventId: String, token: String) async {
+    func loadTickets(for eventId: String) async {
         isLoadingTickets = true
         errorMessage = nil
         
         do {
-            self.ticketTypes = try await repository.fetchTicketTypes(eventId: eventId, token: token)
+            self.ticketTypes = try await repository.fetchTicketTypes(eventId: eventId)
         } catch {
             self.errorMessage = "Não foi possível carregar os ingressos."
             self.ticketTypes = []

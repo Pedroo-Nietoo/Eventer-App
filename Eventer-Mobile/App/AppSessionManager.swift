@@ -1,58 +1,48 @@
 import Foundation
-import CoreData
 import Combine
 
 @MainActor
 class AppSessionManager: ObservableObject {
     @Published var isAuthenticated: Bool = false
     @Published var currentUserEmail: String?
-    @Published var token: String?
     
-    private let context = CoreDataManager.shared.viewContext
+    private var cancellables = Set<AnyCancellable>()
     
     init() {
         checkExistingSession()
+        setupNotificationListeners()
+    }
+    
+    private func setupNotificationListeners() {
+        NotificationCenter.default.publisher(for: APIClient.sessionExpiredNotification)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] _ in
+                self?.logout()
+            }
+            .store(in: &cancellables)
     }
     
     func checkExistingSession() {
-        let request = NSFetchRequest<UserSessionEntity>(entityName: "UserSessionEntity")
-        do {
-            let sessions = try context.fetch(request)
-            if let activeSession = sessions.first {
-                self.currentUserEmail = activeSession.email
-                self.token = activeSession.token
-                self.isAuthenticated = true
-            }
-        } catch {
-            print("Erro ao carregar sessão.")
+        if KeychainManager.shared.read(key: .accessToken) != nil {
+            self.currentUserEmail = KeychainManager.shared.read(key: .userEmail)
+            self.isAuthenticated = true
+        } else {
+            self.isAuthenticated = false
         }
     }
     
-    func saveSession(token: String, email: String) {
-        clearSessions()
-        
-        let newSession = UserSessionEntity(context: context)
-        newSession.token = token
-        newSession.email = email
-        
-        CoreDataManager.shared.saveContext()
+    func saveSession(accessToken: String, refreshToken: String, email: String) {
+        KeychainManager.shared.save(key: .accessToken, value: accessToken)
+        KeychainManager.shared.save(key: .refreshToken, value: refreshToken)
+        KeychainManager.shared.save(key: .userEmail, value: email)
         
         self.currentUserEmail = email
-        self.token = token
         self.isAuthenticated = true
     }
     
     func logout() {
-        clearSessions()
+        KeychainManager.shared.clearAllSessionData()
         self.isAuthenticated = false
         self.currentUserEmail = nil
-        self.token = nil
-    }
-    
-    private func clearSessions() {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserSessionEntity")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
-        _ = try? context.execute(deleteRequest)
-        CoreDataManager.shared.saveContext()
     }
 }

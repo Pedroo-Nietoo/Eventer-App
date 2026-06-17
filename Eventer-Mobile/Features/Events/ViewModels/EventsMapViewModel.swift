@@ -22,23 +22,22 @@ class EventsMapViewModel: ObservableObject {
         locationManager.requestPermission()
     }
     
-    func updateRadius(_ radius: Double, token: String) {
+    func updateRadius(_ radius: Double) {
         currentRadius = radius
         if let loc = locationManager.userLocation {
             Task {
-                await fetchNearbyEvents(location: loc, token: token)
+                await fetchNearbyEvents(location: loc)
             }
         }
     }
     
-    func fetchNearbyEvents(location: CLLocation, token: String) async {
+    func fetchNearbyEvents(location: CLLocation) async {
         isLoading = true
         do {
             self.nearbyEvents = try await repository.fetchNearbyEvents(
                 lat: location.coordinate.latitude,
                 lng: location.coordinate.longitude,
-                radius: currentRadius,
-                token: token
+                radius: currentRadius
             )
         } catch {
             self.nearbyEvents = []
@@ -46,10 +45,10 @@ class EventsMapViewModel: ObservableObject {
         isLoading = false
     }
     
-    func startTracking(token: String) {
+    func startTracking() {
         locationManager.onLocationSignificantChange = { [weak self] location in
             Task { @MainActor in
-                await self?.fetchNearbyEvents(location: location, token: token)
+                await self?.fetchNearbyEvents(location: location)
             }
         }
         requestLocation()

@@ -26,30 +26,32 @@ class APIClient {
     static let shared = APIClient()
     private let baseURL = "https://eventer-api-dev.onrender.com"
     
+    static let sessionExpiredNotification = Notification.Name("SessionExpiredNotification")
+    
     private init() {}
     
-    func request<T: Decodable>(endpoint: String, method: String, body: Data? = nil, token: String? = nil) async throws -> T {
+    func request<T: Decodable>(endpoint: String, method: String, body: Data? = nil, isRetry: Bool = false) async throws -> T {
         guard let url = URL(string: baseURL + endpoint) else {
             throw APIError.invalidURL
         }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = method
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = method
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         
-        if let token = token {
-            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        if let token = KeychainManager.shared.read(key: .accessToken) {
+            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         
         if let body = body {
-            request.httpBody = body
+            urlRequest.httpBody = body
         }
         
         print("🚀 [NETWORK OUT] \(method) \(url.absoluteString)")
         
         do {
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
             
             if let jsonString = String(data: data, encoding: .utf8) {
                 print("📦 [NETWORK IN] \(url.path)\nResponse: \(jsonString)")
@@ -59,10 +61,21 @@ class APIClient {
                 throw APIError.noData
             }
             
+            if httpResponse.statusCode == 401 {
+                if !isRetry {
+                    print("⚠️ [NETWORK] Access Token expirado. Tentando obter Refresh Token...")
+                    return try await handleRefreshToken(endpoint: endpoint, method: method, originalBody: body)
+                } else {
+                    print("❌ [NETWORK] Erro 401 persistente após tentativa de Refresh.")
+                    NotificationCenter.default.post(name: APIClient.sessionExpiredNotification, object: nil)
+                    throw APIError.unauthorized
+                }
+            }
+            
             switch httpResponse.statusCode {
             case 200...299:
                 break
-            case 401, 403:
+            case 403:
                 throw APIError.unauthorized
             case 409:
                 throw APIError.conflict
@@ -80,6 +93,48 @@ class APIClient {
         } catch {
             print("❌ [DECODE/UNKNOWN ERROR] \(error)")
             throw APIError.unknown(error)
+        }
+    }
+    
+    private func handleRefreshToken<T: Decodable>(endpoint: String, method: String, originalBody: Data?) async throws -> T {
+        guard let refreshToken = KeychainManager.shared.read(key: .refreshToken) else {
+            print("❌ [REFRESH] Nenhum Refresh Token localizado no Keychain.")
+            NotificationCenter.default.post(name: APIClient.sessionExpiredNotification, object: nil)
+            throw APIError.unauthorized
+        }
+        
+        guard let url = URL(string: baseURL + "/auth/refresh") else {
+            throw APIError.invalidURL
+        }
+        
+        let refreshDto = RefreshRequestDto(refresh_token: refreshToken)
+        
+        var refreshRequest = URLRequest(url: url)
+        refreshRequest.httpMethod = "POST"
+        refreshRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        refreshRequest.setValue("application/json", forHTTPHeaderField: "Accept")
+        refreshRequest.httpBody = try? JSONEncoder().encode(refreshDto)
+        
+        print("🔄 [REFRESH OUT] POST \(url.absoluteString)")
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: refreshRequest)
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                print("❌ [REFRESH] Falha ao renovar token no backend. Sessão completamente expirada.")
+                NotificationCenter.default.post(name: APIClient.sessionExpiredNotification, object: nil)
+                throw APIError.unauthorized
+            }
+            
+            let refreshResponse = try JSONDecoder().decode(RefreshResponseDto.self, from: data)
+            KeychainManager.shared.save(key: .accessToken, value: refreshResponse.access_token)
+            KeychainManager.shared.save(key: .refreshToken, value: refreshResponse.refresh_token)
+            print("✅ [REFRESH] Novo Access Token gerado com sucesso!")
+            
+            return try await self.request(endpoint: endpoint, method: method, body: originalBody, isRetry: true)
+        } catch {
+            NotificationCenter.default.post(name: APIClient.sessionExpiredNotification, object: nil)
+            throw APIError.unauthorized
         }
     }
 }

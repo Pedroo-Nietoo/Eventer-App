@@ -12,7 +12,7 @@
 		59EFF6752FDB35AF007A50D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EFF6722FDB35AF007A50D5 /* Assets.xcassets */; };
 		59EFF6762FDB35AF007A50D5 /* Eventer_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */; };
 		59EFF6872FDB37DD007A50D5 /* EventerMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6852FDB37DD007A50D5 /* EventerMobile.xcdatamodeld */; };
-		59EFF6892FDB382B007A50D5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6882FDB382B007A50D5 /* CoreDataManager.swift */; };
+		59EFF6892FDB382B007A50D5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6882FDB382B007A50D5 /* KeychainManager.swift */; };
 		59EFF68B2FDB3862007A50D5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68A2FDB3862007A50D5 /* AuthRepository.swift */; };
 		59EFF68D2FDB38D2007A50D5 /* AppSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68C2FDB38D2007A50D5 /* AppSessionManager.swift */; };
 		59EFF68F2FDB3901007A50D5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68E2FDB3901007A50D5 /* LoginViewModel.swift */; };
@@ -61,7 +61,7 @@
 		59EFF6722FDB35AF007A50D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventer_MobileApp.swift; sourceTree = "<group>"; };
 		59EFF6862FDB37DD007A50D5 /* EventerMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventerMobile.xcdatamodel; sourceTree = "<group>"; };
-		59EFF6882FDB382B007A50D5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		59EFF6882FDB382B007A50D5 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		59EFF68A2FDB3862007A50D5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		59EFF68C2FDB38D2007A50D5 /* AppSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSessionManager.swift; sourceTree = "<group>"; };
 		59EFF68E2FDB3901007A50D5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 		59EFF6782FDB35BE007A50D5 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				59EFF6882FDB382B007A50D5 /* CoreDataManager.swift */,
+				59EFF6882FDB382B007A50D5 /* KeychainManager.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -494,7 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59EFF6A22FDB3D7F007A50D5 /* SecureInputView.swift in Sources */,
-				59EFF6892FDB382B007A50D5 /* CoreDataManager.swift in Sources */,
+				59EFF6892FDB382B007A50D5 /* KeychainManager.swift in Sources */,
 				59EFF6B62FDB41BF007A50D5 /* EventRepository.swift in Sources */,
 				59EFF6912FDB3933007A50D5 /* LoginView.swift in Sources */,
 				59EFF6AC2FDB4050007A50D5 /* EventListSheetView.swift in Sources */,

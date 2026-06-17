@@ -33,7 +33,7 @@ struct LoginView: View {
                     SecureInputView(title: "Senha", text: $viewModel.password)
                 }
                 
-                Toggle("Lembrar de mim", isOn: $viewModel.rememberMe)
+                Toggle("Entrar com Biometria", isOn: $viewModel.enableBiometrics)
                     .padding(.vertical, 8)
                 
                 if let error = viewModel.errorMessage {
@@ -71,6 +71,11 @@ struct LoginView: View {
             }
             .padding()
             .navigationBarHidden(true)
+            .onAppear {
+                if viewModel.enableBiometrics && !viewModel.email.isEmpty {
+                    viewModel.attemptBiometricLogin(sessionManager: sessionManager)
+                }
+            }
         }
     }
 }

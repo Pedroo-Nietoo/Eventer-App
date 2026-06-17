@@ -8,6 +8,7 @@ struct EventsMapView: View {
     
     @State private var sheetHeight: CGFloat = 400
     @GestureState private var dragOffset: CGFloat = 0
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             
@@ -31,9 +32,7 @@ struct EventsMapView: View {
                         HStack(spacing: 12) {
                             ForEach(viewModel.radiusOptions, id: \.self) { radius in
                                 Button(action: {
-                                    if let token = sessionManager.token {
-                                        viewModel.updateRadius(radius, token: token)
-                                    }
+                                    viewModel.updateRadius(radius)
                                 }) {
                                     Text("\(Int(radius / 1000)) km")
                                         .fontWeight(.semibold)
@@ -107,12 +106,11 @@ struct EventsMapView: View {
         }
         .ignoresSafeArea(edges: .all)
         .onAppear {
-            if let token = sessionManager.token {
-                viewModel.startTracking(token: token)
-            }
+            viewModel.startTracking()
         }
     }
 }
+
 struct CustomSheetCorners: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners

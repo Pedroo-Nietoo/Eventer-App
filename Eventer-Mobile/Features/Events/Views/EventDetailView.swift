@@ -24,8 +24,7 @@ struct EventDetailView: View {
                                 .overlay(Image(systemName: "photo").font(.largeTitle).foregroundColor(.gray))
                         }
                     }
-                    .frame(height: 320)
-                    .frame(maxWidth: .infinity)
+                    .frame(width: UIScreen.main.bounds.width, height: 320)
                     .clipped()
                     
                     VStack(alignment: .leading, spacing: 24) {
@@ -127,8 +126,8 @@ struct EventDetailView: View {
             bottomBar
         }
         .onAppear {
-            if let token = sessionManager.token {
-                Task { await viewModel.loadTickets(for: event.id, token: token) }
+            Task {
+                await viewModel.loadTickets(for: event.id)
             }
         }
     }
@@ -177,6 +176,7 @@ struct EventDetailView: View {
         return isoString
     }
 }
+
 struct TopCornerShape: Shape {
     var radius: CGFloat
     func path(in rect: CGRect) -> Path {
@@ -188,6 +188,7 @@ struct TopCornerShape: Shape {
         return Path(path.cgPath)
     }
 }
+
 struct SectionView<Content: View>: View {
     let title: String
     let content: Content
@@ -209,6 +210,7 @@ struct SectionView<Content: View>: View {
         .padding(.top, 12)
     }
 }
+
 struct RuleRow: View {
     let text: String
     var body: some View {
@@ -224,6 +226,7 @@ struct RuleRow: View {
         }
     }
 }
+
 struct InfoRow: View {
     let icon: String
     let text: String
