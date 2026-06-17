@@ -11,7 +11,6 @@
 		5981B0D12FDC95CB0038B422 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */; };
 		59EFF6752FDB35AF007A50D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EFF6722FDB35AF007A50D5 /* Assets.xcassets */; };
 		59EFF6762FDB35AF007A50D5 /* Eventer_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */; };
-		59EFF6872FDB37DD007A50D5 /* EventerMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6852FDB37DD007A50D5 /* EventerMobile.xcdatamodeld */; };
 		59EFF6892FDB382B007A50D5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6882FDB382B007A50D5 /* KeychainManager.swift */; };
 		59EFF68B2FDB3862007A50D5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68A2FDB3862007A50D5 /* AuthRepository.swift */; };
 		59EFF68D2FDB38D2007A50D5 /* AppSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF68C2FDB38D2007A50D5 /* AppSessionManager.swift */; };
@@ -60,7 +59,6 @@
 		59EFF65B2FDB3558007A50D5 /* Eventer-MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eventer-MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EFF6722FDB35AF007A50D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eventer_MobileApp.swift; sourceTree = "<group>"; };
-		59EFF6862FDB37DD007A50D5 /* EventerMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventerMobile.xcdatamodel; sourceTree = "<group>"; };
 		59EFF6882FDB382B007A50D5 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		59EFF68A2FDB3862007A50D5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		59EFF68C2FDB38D2007A50D5 /* AppSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSessionManager.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				59EFF6722FDB35AF007A50D5 /* Assets.xcassets */,
-				59EFF6852FDB37DD007A50D5 /* EventerMobile.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -507,7 +504,6 @@
 				59EFF6932FDB39E6007A50D5 /* AuthDTOs.swift in Sources */,
 				59EFF68D2FDB38D2007A50D5 /* AppSessionManager.swift in Sources */,
 				59EFF6AE2FDB4069007A50D5 /* EventDetailView.swift in Sources */,
-				59EFF6872FDB37DD007A50D5 /* EventerMobile.xcdatamodeld in Sources */,
 				59EFF69D2FDB3B68007A50D5 /* RootView.swift in Sources */,
 				59EFF6B82FDB41D3007A50D5 /* EventRowView.swift in Sources */,
 				5981B0CF2FDC95990038B422 /* TicketType.swift in Sources */,
@@ -854,19 +850,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		59EFF6852FDB37DD007A50D5 /* EventerMobile.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				59EFF6862FDB37DD007A50D5 /* EventerMobile.xcdatamodel */,
-			);
-			currentVersion = 59EFF6862FDB37DD007A50D5 /* EventerMobile.xcdatamodel */;
-			path = EventerMobile.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 59EFF6372FDB3556007A50D5 /* Project object */;
 }
