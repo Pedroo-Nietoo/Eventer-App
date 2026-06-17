@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5916BAEA2FE31BD000178CC9 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAE92FE31BD000178CC9 /* EventListViewModel.swift */; };
+		5916BAEC2FE31BEB00178CC9 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAEB2FE31BEB00178CC9 /* EventListView.swift */; };
+		5916BAEE2FE3227400178CC9 /* PaginationMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAED2FE3227400178CC9 /* PaginationMeta.swift */; };
+		5916BAF02FE3253100178CC9 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAEF2FE3253100178CC9 /* UserDTO.swift */; };
+		5916BAF42FE3259600178CC9 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAF32FE3259600178CC9 /* UserRepository.swift */; };
+		5916BAF72FE325D500178CC9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAF62FE325D500178CC9 /* ProfileViewModel.swift */; };
+		5916BAFA2FE3260200178CC9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAF92FE3260200178CC9 /* ProfileView.swift */; };
 		5981B0CF2FDC95990038B422 /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981B0CE2FDC95990038B422 /* TicketType.swift */; };
 		5981B0D12FDC95CB0038B422 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */; };
 		59EFF6752FDB35AF007A50D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EFF6722FDB35AF007A50D5 /* Assets.xcassets */; };
@@ -52,6 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5916BAE92FE31BD000178CC9 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		5916BAEB2FE31BEB00178CC9 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		5916BAED2FE3227400178CC9 /* PaginationMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationMeta.swift; sourceTree = "<group>"; };
+		5916BAEF2FE3253100178CC9 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		5916BAF32FE3259600178CC9 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		5916BAF62FE325D500178CC9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		5916BAF92FE3260200178CC9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5981B0CE2FDC95990038B422 /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
 		5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		59EFF63F2FDB3556007A50D5 /* Eventer-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventer-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +134,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5916BAF12FE3256300178CC9 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				5916BAF82FE325FB00178CC9 /* Views */,
+				5916BAF52FE325CF00178CC9 /* ViewModels */,
+				5916BAF22FE3256900178CC9 /* Repositories */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		5916BAF22FE3256900178CC9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5916BAF32FE3259600178CC9 /* UserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5916BAF52FE325CF00178CC9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5916BAF62FE325D500178CC9 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5916BAF82FE325FB00178CC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5916BAF92FE3260200178CC9 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		59EFF6362FDB3556007A50D5 = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +283,9 @@
 		59EFF67E2FDB36BB007A50D5 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				5916BAED2FE3227400178CC9 /* PaginationMeta.swift */,
 				59EFF6922FDB39E6007A50D5 /* AuthDTOs.swift */,
+				5916BAEF2FE3253100178CC9 /* UserDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -243,6 +293,7 @@
 		59EFF67F2FDB36F4007A50D5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				5916BAF12FE3256300178CC9 /* Users */,
 				59EFF6A62FDB400B007A50D5 /* Events */,
 				59EFF69E2FDB3B8C007A50D5 /* Main */,
 				59EFF6802FDB3757007A50D5 /* Auth */,
@@ -323,6 +374,7 @@
 		59EFF6A72FDB4010007A50D5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5916BAE92FE31BD000178CC9 /* EventListViewModel.swift */,
 				5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */,
 				59EFF6A82FDB401A007A50D5 /* EventsMapViewModel.swift */,
 			);
@@ -332,6 +384,7 @@
 		59EFF6AA2FDB4046007A50D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5916BAEB2FE31BEB00178CC9 /* EventListView.swift */,
 				59EFF6B72FDB41D3007A50D5 /* EventRowView.swift */,
 				59EFF6AF2FDB40B0007A50D5 /* EventsMapView.swift */,
 				59EFF6AD2FDB4069007A50D5 /* EventDetailView.swift */,
@@ -491,7 +544,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59EFF6A22FDB3D7F007A50D5 /* SecureInputView.swift in Sources */,
+				5916BAEE2FE3227400178CC9 /* PaginationMeta.swift in Sources */,
 				59EFF6892FDB382B007A50D5 /* KeychainManager.swift in Sources */,
+				5916BAEA2FE31BD000178CC9 /* EventListViewModel.swift in Sources */,
 				59EFF6B62FDB41BF007A50D5 /* EventRepository.swift in Sources */,
 				59EFF6912FDB3933007A50D5 /* LoginView.swift in Sources */,
 				59EFF6AC2FDB4050007A50D5 /* EventListSheetView.swift in Sources */,
@@ -506,13 +561,18 @@
 				59EFF6AE2FDB4069007A50D5 /* EventDetailView.swift in Sources */,
 				59EFF69D2FDB3B68007A50D5 /* RootView.swift in Sources */,
 				59EFF6B82FDB41D3007A50D5 /* EventRowView.swift in Sources */,
+				5916BAFA2FE3260200178CC9 /* ProfileView.swift in Sources */,
 				5981B0CF2FDC95990038B422 /* TicketType.swift in Sources */,
 				59EFF69B2FDB3ADA007A50D5 /* RegisterView.swift in Sources */,
 				5981B0D12FDC95CB0038B422 /* EventDetailViewModel.swift in Sources */,
 				59EFF6A02FDB3B96007A50D5 /* MainTabView.swift in Sources */,
+				5916BAEC2FE31BEB00178CC9 /* EventListView.swift in Sources */,
 				59EFF6972FDB3A75007A50D5 /* BiometricManager.swift in Sources */,
+				5916BAF72FE325D500178CC9 /* ProfileViewModel.swift in Sources */,
 				59EFF6A92FDB401A007A50D5 /* EventsMapViewModel.swift in Sources */,
+				5916BAF42FE3259600178CC9 /* UserRepository.swift in Sources */,
 				59EFF6B22FDB4195007A50D5 /* Event.swift in Sources */,
+				5916BAF02FE3253100178CC9 /* UserDTO.swift in Sources */,
 				59EFF6952FDB3A24007A50D5 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

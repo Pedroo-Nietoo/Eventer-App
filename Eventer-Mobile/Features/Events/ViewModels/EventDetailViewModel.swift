@@ -7,6 +7,8 @@ class EventDetailViewModel: ObservableObject {
     @Published var isLoadingTickets = false
     @Published var errorMessage: String? = nil
     
+    @Published var selectedTicket: TicketType? = nil
+    
     private let repository: EventRepositoryProtocol
     
     init(repository: EventRepositoryProtocol = EventRepository()) {
@@ -25,5 +27,13 @@ class EventDetailViewModel: ObservableObject {
         }
         
         isLoadingTickets = false
+    }
+    
+    func selectTicket(_ ticket: TicketType) {
+        if selectedTicket?.id == ticket.id {
+            selectedTicket = nil
+        } else {
+            selectedTicket = ticket
+        }
     }
 }

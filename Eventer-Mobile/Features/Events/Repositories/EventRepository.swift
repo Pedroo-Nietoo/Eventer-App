@@ -1,7 +1,7 @@
 import Foundation
 
 protocol EventRepositoryProtocol {
-    func fetchEvents(page: Int, limit: Int) async throws -> [Event]
+    func fetchEvents(page: Int, limit: Int, query: String?) async throws -> PaginatedResponse<Event>
     func fetchNearbyEvents(lat: Double, lng: Double, radius: Double) async throws -> [Event]
     func fetchTicketTypes(eventId: String) async throws -> [TicketType]
 }
@@ -13,16 +13,19 @@ class EventRepository: EventRepositoryProtocol {
         self.apiClient = apiClient
     }
     
-    func fetchEvents(page: Int = 1, limit: Int = 20) async throws -> [Event] {
-        struct PaginatedResponse: Decodable {
-            let data: [Event]
+    func fetchEvents(page: Int = 1, limit: Int = 20, query: String? = nil) async throws -> PaginatedResponse<Event> {
+        var endpoint = "/events?page=\(page)&limit=\(limit)"
+        
+        if let query = query, !query.isEmpty, let encodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            endpoint += "&q=\(encodedQuery)"
         }
         
-        let response: PaginatedResponse = try await apiClient.request(
-            endpoint: "/events?page=\(page)&limit=\(limit)",
+        print("🔍 [REQUEST EVENTS] Rota gerada: \(endpoint)")
+        
+        return try await apiClient.request(
+            endpoint: endpoint,
             method: "GET"
         )
-        return response.data
     }
     
     func fetchNearbyEvents(lat: Double, lng: Double, radius: Double) async throws -> [Event] {
@@ -47,10 +50,11 @@ class EventRepository: EventRepositoryProtocol {
         
         print("🎟️ [REQUEST TICKETS] Rota gerada: \(endpoint)")
         
-        let response: [TicketType] = try await apiClient.request(
+        let response: PaginatedResponse<TicketType> = try await apiClient.request(
             endpoint: endpoint,
             method: "GET"
         )
-        return response
+        
+        return response.data
     }
 }

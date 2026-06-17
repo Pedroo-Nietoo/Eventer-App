@@ -20,22 +20,25 @@ struct MainTabView: View {
                 Label("Radar", systemImage: "map.fill")
             }
             
+            EventListView()
+                    .toolbar(.hidden, for: .navigationBar)
+            .tabItem {
+                Label("Eventos", systemImage: "calendar")
+            }
+
+            
             Text("Meus Ingressos")
                 .tabItem {
                     Label("Ingressos", systemImage: "ticket")
                 }
             
-            NavigationStack {
-                List {
-                    Section(header: Text("Minha Conta")) {
-                        Text(sessionManager.currentUserEmail ?? "Usuário")
-                        Button("Sair da Conta", role: .destructive) {
-                            sessionManager.logout()
-                        }
-                    }
+            Text("Meus Pedidos")
+                .tabItem {
+                    Label("Pedidos", systemImage: "cart.fill")
                 }
-                .navigationTitle("Perfil")
-            }
+            
+            ProfileView()
+                    .toolbar(.hidden, for: .navigationBar)
             .tabItem {
                 Label("Perfil", systemImage: "person.crop.circle")
             }
