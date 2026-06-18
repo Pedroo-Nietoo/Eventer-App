@@ -143,29 +143,8 @@ struct EventDetailView: View {
             }
         }
         .sheet(isPresented: $showCheckoutSheet) {
-            // TODO: Substituir por Tela de Checkout futuramente
-            NavigationView {
-                VStack(spacing: 20) {
-                    Image(systemName: "cart.fill")
-                        .font(.system(size: 60))
-                        .foregroundColor(.accentColor)
-                    Text("Finalizar Compra")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    Text("Ingresso: \(viewModel.selectedTicket?.name ?? "")")
-                    Text(String(format: "Valor: R$ %.2f", viewModel.selectedTicket?.price ?? 0.0))
-                        .fontWeight(.bold)
-                    
-                    Spacer()
-                }
-                .padding()
-                .navigationTitle("Checkout")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Fechar") { showCheckoutSheet = false }
-                    }
-                }
+            if let ticket = viewModel.selectedTicket {
+                CheckoutView(ticket: ticket)
             }
         }
     }

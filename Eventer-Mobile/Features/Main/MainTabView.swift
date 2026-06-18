@@ -27,14 +27,10 @@ struct MainTabView: View {
             }
 
             
-            Text("Meus Ingressos")
+            TicketListView()
+                    .toolbar(.hidden, for: .navigationBar)
                 .tabItem {
-                    Label("Ingressos", systemImage: "ticket")
-                }
-            
-            Text("Meus Pedidos")
-                .tabItem {
-                    Label("Pedidos", systemImage: "cart.fill")
+                    Label("Meus Ingressos", systemImage: "ticket")
                 }
             
             ProfileView()

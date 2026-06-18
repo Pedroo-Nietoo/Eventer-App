@@ -16,6 +16,18 @@
 		5916BAFA2FE3260200178CC9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5916BAF92FE3260200178CC9 /* ProfileView.swift */; };
 		5981B0CF2FDC95990038B422 /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981B0CE2FDC95990038B422 /* TicketType.swift */; };
 		5981B0D12FDC95CB0038B422 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */; };
+		598C4A112FE45AFA00791615 /* OrderDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A102FE45AFA00791615 /* OrderDTO.swift */; };
+		598C4A152FE45B1A00791615 /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A142FE45B1A00791615 /* OrderRepository.swift */; };
+		598C4A182FE45B7400791615 /* StripeWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A172FE45B7400791615 /* StripeWebView.swift */; };
+		598C4A1B2FE45B8E00791615 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A1A2FE45B8A00791615 /* CheckoutViewModel.swift */; };
+		598C4A1D2FE45B9A00791615 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A1C2FE45B9A00791615 /* CheckoutView.swift */; };
+		598C4A1F2FE45F4100791615 /* OrderHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A1E2FE45F4100791615 /* OrderHistoryViewModel.swift */; };
+		598C4A212FE45F4B00791615 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A202FE45F4B00791615 /* OrderHistoryView.swift */; };
+		598C4A232FE4618B00791615 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A222FE4618600791615 /* OrderDetailView.swift */; };
+		598C4A252FE465BB00791615 /* TicketDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A242FE465BB00791615 /* TicketDTO.swift */; };
+		598C4A2B2FE465EE00791615 /* TicketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A2A2FE465EE00791615 /* TicketRepository.swift */; };
+		598C4A2D2FE465FF00791615 /* TicketListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A2C2FE465FF00791615 /* TicketListViewModel.swift */; };
+		598C4A2F2FE4660700791615 /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C4A2E2FE4660700791615 /* TicketListView.swift */; };
 		59EFF6752FDB35AF007A50D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EFF6722FDB35AF007A50D5 /* Assets.xcassets */; };
 		59EFF6762FDB35AF007A50D5 /* Eventer_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6732FDB35AF007A50D5 /* Eventer_MobileApp.swift */; };
 		59EFF6892FDB382B007A50D5 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EFF6882FDB382B007A50D5 /* KeychainManager.swift */; };
@@ -68,6 +80,18 @@
 		5916BAF92FE3260200178CC9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5981B0CE2FDC95990038B422 /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
 		5981B0D02FDC95CB0038B422 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		598C4A102FE45AFA00791615 /* OrderDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDTO.swift; sourceTree = "<group>"; };
+		598C4A142FE45B1A00791615 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
+		598C4A172FE45B7400791615 /* StripeWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeWebView.swift; sourceTree = "<group>"; };
+		598C4A1A2FE45B8A00791615 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
+		598C4A1C2FE45B9A00791615 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		598C4A1E2FE45F4100791615 /* OrderHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewModel.swift; sourceTree = "<group>"; };
+		598C4A202FE45F4B00791615 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
+		598C4A222FE4618600791615 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		598C4A242FE465BB00791615 /* TicketDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDTO.swift; sourceTree = "<group>"; };
+		598C4A2A2FE465EE00791615 /* TicketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRepository.swift; sourceTree = "<group>"; };
+		598C4A2C2FE465FF00791615 /* TicketListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListViewModel.swift; sourceTree = "<group>"; };
+		598C4A2E2FE4660700791615 /* TicketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListView.swift; sourceTree = "<group>"; };
 		59EFF63F2FDB3556007A50D5 /* Eventer-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventer-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EFF6512FDB3558007A50D5 /* Eventer-MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eventer-MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EFF65B2FDB3558007A50D5 /* Eventer-MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Eventer-MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +190,78 @@
 				5916BAF92FE3260200178CC9 /* ProfileView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		598C4A122FE45B0F00791615 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A192FE45B7E00791615 /* ViewModels */,
+				598C4A162FE45B7000791615 /* Views */,
+				598C4A132FE45B1400791615 /* Repositories */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		598C4A132FE45B1400791615 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A142FE45B1A00791615 /* OrderRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		598C4A162FE45B7000791615 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A222FE4618600791615 /* OrderDetailView.swift */,
+				598C4A202FE45F4B00791615 /* OrderHistoryView.swift */,
+				598C4A1C2FE45B9A00791615 /* CheckoutView.swift */,
+				598C4A172FE45B7400791615 /* StripeWebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		598C4A192FE45B7E00791615 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A1E2FE45F4100791615 /* OrderHistoryViewModel.swift */,
+				598C4A1A2FE45B8A00791615 /* CheckoutViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		598C4A262FE465D400791615 /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A292FE465E900791615 /* ViewModels */,
+				598C4A282FE465E100791615 /* Views */,
+				598C4A272FE465D900791615 /* Repositories */,
+			);
+			path = Tickets;
+			sourceTree = "<group>";
+		};
+		598C4A272FE465D900791615 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A2A2FE465EE00791615 /* TicketRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		598C4A282FE465E100791615 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A2E2FE4660700791615 /* TicketListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		598C4A292FE465E900791615 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				598C4A2C2FE465FF00791615 /* TicketListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		59EFF6362FDB3556007A50D5 = {
@@ -283,9 +379,11 @@
 		59EFF67E2FDB36BB007A50D5 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				598C4A242FE465BB00791615 /* TicketDTO.swift */,
 				5916BAED2FE3227400178CC9 /* PaginationMeta.swift */,
 				59EFF6922FDB39E6007A50D5 /* AuthDTOs.swift */,
 				5916BAEF2FE3253100178CC9 /* UserDTO.swift */,
+				598C4A102FE45AFA00791615 /* OrderDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -293,6 +391,8 @@
 		59EFF67F2FDB36F4007A50D5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				598C4A262FE465D400791615 /* Tickets */,
+				598C4A122FE45B0F00791615 /* Orders */,
 				5916BAF12FE3256300178CC9 /* Users */,
 				59EFF6A62FDB400B007A50D5 /* Events */,
 				59EFF69E2FDB3B8C007A50D5 /* Main */,
@@ -543,22 +643,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598C4A1B2FE45B8E00791615 /* CheckoutViewModel.swift in Sources */,
+				598C4A1F2FE45F4100791615 /* OrderHistoryViewModel.swift in Sources */,
 				59EFF6A22FDB3D7F007A50D5 /* SecureInputView.swift in Sources */,
 				5916BAEE2FE3227400178CC9 /* PaginationMeta.swift in Sources */,
 				59EFF6892FDB382B007A50D5 /* KeychainManager.swift in Sources */,
 				5916BAEA2FE31BD000178CC9 /* EventListViewModel.swift in Sources */,
+				598C4A2D2FE465FF00791615 /* TicketListViewModel.swift in Sources */,
 				59EFF6B62FDB41BF007A50D5 /* EventRepository.swift in Sources */,
 				59EFF6912FDB3933007A50D5 /* LoginView.swift in Sources */,
 				59EFF6AC2FDB4050007A50D5 /* EventListSheetView.swift in Sources */,
 				59EFF6B02FDB40B0007A50D5 /* EventsMapView.swift in Sources */,
 				59EFF68B2FDB3862007A50D5 /* AuthRepository.swift in Sources */,
 				59EFF6A52FDB3FF2007A50D5 /* LocationManager.swift in Sources */,
+				598C4A212FE45F4B00791615 /* OrderHistoryView.swift in Sources */,
 				59EFF68F2FDB3901007A50D5 /* LoginViewModel.swift in Sources */,
 				59EFF6992FDB3AA6007A50D5 /* RegisterViewModel.swift in Sources */,
+				598C4A112FE45AFA00791615 /* OrderDTO.swift in Sources */,
 				59EFF6762FDB35AF007A50D5 /* Eventer_MobileApp.swift in Sources */,
 				59EFF6932FDB39E6007A50D5 /* AuthDTOs.swift in Sources */,
 				59EFF68D2FDB38D2007A50D5 /* AppSessionManager.swift in Sources */,
 				59EFF6AE2FDB4069007A50D5 /* EventDetailView.swift in Sources */,
+				598C4A232FE4618B00791615 /* OrderDetailView.swift in Sources */,
+				598C4A252FE465BB00791615 /* TicketDTO.swift in Sources */,
 				59EFF69D2FDB3B68007A50D5 /* RootView.swift in Sources */,
 				59EFF6B82FDB41D3007A50D5 /* EventRowView.swift in Sources */,
 				5916BAFA2FE3260200178CC9 /* ProfileView.swift in Sources */,
@@ -567,10 +674,15 @@
 				5981B0D12FDC95CB0038B422 /* EventDetailViewModel.swift in Sources */,
 				59EFF6A02FDB3B96007A50D5 /* MainTabView.swift in Sources */,
 				5916BAEC2FE31BEB00178CC9 /* EventListView.swift in Sources */,
+				598C4A1D2FE45B9A00791615 /* CheckoutView.swift in Sources */,
 				59EFF6972FDB3A75007A50D5 /* BiometricManager.swift in Sources */,
 				5916BAF72FE325D500178CC9 /* ProfileViewModel.swift in Sources */,
+				598C4A152FE45B1A00791615 /* OrderRepository.swift in Sources */,
 				59EFF6A92FDB401A007A50D5 /* EventsMapViewModel.swift in Sources */,
+				598C4A2B2FE465EE00791615 /* TicketRepository.swift in Sources */,
 				5916BAF42FE3259600178CC9 /* UserRepository.swift in Sources */,
+				598C4A2F2FE4660700791615 /* TicketListView.swift in Sources */,
+				598C4A182FE45B7400791615 /* StripeWebView.swift in Sources */,
 				59EFF6B22FDB4195007A50D5 /* Event.swift in Sources */,
 				5916BAF02FE3253100178CC9 /* UserDTO.swift in Sources */,
 				59EFF6952FDB3A24007A50D5 /* APIClient.swift in Sources */,
