@@ -93,7 +93,3 @@ Para que o app funcione com o ciclo completo de dados (imagens, checkout, etc.),
 ## Licença
 
 Este projeto está sob a licença [MIT](https://github.com/Pedroo-Nietoo/Eventer-App/blob/main/LICENSE).
-
-<p align="center">
-  Desenvolvido por <a href="https://github.com/Pedroo-Nietoo">Pedro Nieto</a>.
-</p>
