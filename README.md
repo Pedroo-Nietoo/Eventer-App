@@ -16,10 +16,11 @@ Este projeto consome os serviços da [Eventer-API](https://github.com/Pedroo-Nie
 ## Telas do App
 
 <p align="center">
-  <img src="docs/home.png" alt="Home Screen" width="22%" />
-  <img src="docs/map.png" alt="Map View" width="22%" />
-  <img src="docs/event_details.png" alt="Event Details" width="22%" />
-  <img src="docs/tickets.png" alt="My Tickets" width="22%" />
+  <img src="assets/home-map-view.png" alt="Home Screen/Map View" width="18%" />
+  <img src="assets/event-details-top.png" alt="Event Details (Top)" width="18%" />
+  <img src="assets/event-details-bottom.png" alt="Event Details (Bottom)" width="18%" />
+  <img src="assets/ticket-blocked.png" alt="Ticket (Blocked)" width="18%" />
+  <img src="assets/ticket-used.png" alt="Ticket (Used)" width="18%" />
 </p>
 
 ## Recursos e Funcionalidades
